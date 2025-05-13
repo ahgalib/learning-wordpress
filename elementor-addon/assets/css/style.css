@@ -1,0 +1,90 @@
+.card-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-list-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.card-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* Updated for 50/50 split */
+.card-content-wrapper {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.card-left-section {
+    flex: 0 0 50%;
+    /* Takes exactly half */
+    max-width: 50%;
+    /* Ensures it doesn't grow beyond half */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-image {
+    flex: 0 0 50%;
+    /* Takes exactly half */
+    max-width: 50%;
+    /* Ensures it doesn't grow beyond half */
+}
+
+.card-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Ensures images fill their container */
+}
+
+.card-button-wrapper {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.elementor-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition: all 0.3s ease;
+}
+
+.elementor-button .elementor-button-icon {
+    display: inline-flex;
+    align-items: center;
+}
+
+.elementor-button .elementor-button-icon i {
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 767px) {
+    .card-content-wrapper {
+        flex-direction: column;
+    }
+
+    .card-left-section,
+    .card-image {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .card-image {
+        order: -1;
+    }
+}
